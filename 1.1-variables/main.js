@@ -15,3 +15,12 @@ let myName = "Dmitry";
 let message = `Привет, мир! Меня зовут ${myName}\n`;
 console.log(message);
 
+console.log("Задача 3");
+let x;
+let y;
+let z;
+x = 2;
+y = 22;
+z = 0;
+let result = x * y + 5 * z + x - 1;
+console.log(result)
