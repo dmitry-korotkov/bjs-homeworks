@@ -33,6 +33,18 @@ function calculateAverageRating(){
 }
 
 function getAverageMark(marks){
+    let sumMark = 0;
+    
+    if (marks.length > 5) {
+        console.log("Внимание! Количество оценок больше 5")
+        marks.splice(2);    
+    }
+
+    for (let i = 0; i < marks.length; i++) {
+        sumMark += marks[i];
+    }
+    let averageMark = sumMark / marks.length
+    return averageMark;
     // код для задачи №2 писать здесь
     //return averageMark;
 }
