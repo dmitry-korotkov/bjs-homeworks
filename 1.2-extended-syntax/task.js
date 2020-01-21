@@ -11,6 +11,17 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
+    let d = b * b - 4 * a * c;
+    let x = [];
+    if (d < 0 ) {
+        x = [];
+    } else if (d === 0) {
+        x.push(-b / (2 * a))
+    } else {
+        x.push((-b + Math.sqrt(d)) / (2 * a))
+        x.push((-b - Math.sqrt(d)) / (2 * a));
+    }
+    return x
     // код для задачи №1 писать здесь
     //return x;
 }
