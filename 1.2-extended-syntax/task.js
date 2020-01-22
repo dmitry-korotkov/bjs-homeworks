@@ -22,8 +22,6 @@ function getResult(a,b,c){
         x.push((-b - Math.sqrt(d)) / (2 * a));
     }
     return x
-    // код для задачи №1 писать здесь
-    //return x;
 }
 
 function calculateAverageRating(){
@@ -37,16 +35,13 @@ function getAverageMark(marks){
     
     if (marks.length > 5) {
         console.log("Внимание! Количество оценок больше 5")
-        marks.splice(2);    
+        marks.splice(5);    
     }
 
     for (let i = 0; i < marks.length; i++) {
         sumMark += marks[i];
     }
-    let averageMark = sumMark / marks.length
-    return averageMark;
-    // код для задачи №2 писать здесь
-    //return averageMark;
+    return sumMark / marks.length
 }
 
 function calculateDrinkTask(){
@@ -59,13 +54,10 @@ function calculateDrinkTask(){
 function askDrink(name,dateOfBirthday){
     var age = new Date().getFullYear() - dateOfBirthday.getFullYear();
     if (age >= 18) {
-        alert(`Не желаете ли олд-фэшн, ${name}?`)
+        console.log(`Не желаете ли олд-фэшн, ${name}?`)
     } else {
-        alert(`Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`)
+        console.log(`Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`)
     }
     console.log(age);
     return age;
-    // код для задачи №3 писать здесь
-    //console.log(result)
-    //return result;
 }
