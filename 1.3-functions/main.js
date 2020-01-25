@@ -50,7 +50,7 @@ function getAverageScore(data) {
     let count = 0
     for (let subject in data) {
         let value = arrayAverage(data[ subject ])
-        sum += arrayAverage(data[ subject ]);
+        sum += value;
         count++
         result[subject] = value;   
     }
@@ -58,4 +58,29 @@ function getAverageScore(data) {
     return result;
 }
 
-//Для проверки console.log( getAverageScore({algebra: [4, 4, 4], russian: [2, 2, 2], music: [3, 5, 6, 3, 5, 2, 3], french: [2, 3, 3, 4]}))
+//Для проверки задачи 2
+//console.log( getAverageScore({algebra: [4, 4, 4], russian: [2, 2, 2], music: [3, 5, 6, 3, 5, 2, 3], french: [2, 3, 3, 4]}))
+
+//Задача 3
+
+function getPersonData(secretData) {
+    let result = {}
+    result.firstName = getName(secretData.aaa);
+    result.lastName = getName(secretData.bbb);
+    return result
+  }
+  
+  function getName(number) {
+    if (number === 0) {
+      return "Родриго";
+    } else {
+      return "Эмильо" ;
+    }
+  }
+
+/* Для проверки задачи 3
+console.log(getPersonData({aaa: 0, bbb: 0}))
+console.log(getPersonData({aaa: 0, bbb: 1}))
+console.log(getPersonData({aaa: 1, bbb: 0}))
+console.log(getPersonData({aaa: 1, bbb: 1}))
+*/
