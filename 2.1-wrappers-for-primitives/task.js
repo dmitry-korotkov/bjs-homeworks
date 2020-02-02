@@ -27,6 +27,9 @@ function sayHello() {
 }
 
 function getGreeting(name) {
-    // код для задачи №2 писать здесь
-    //return greeting;
+    if (name === "null" || name === "undefined" || name === "") {
+        return `Привет, мир! Меня зовут Аноним`
+    } else {
+        return `Привет, мир! Меня зовут ${name}`
+    }
 }
