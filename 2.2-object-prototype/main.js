@@ -7,7 +7,15 @@ function initCheckBirthday() {
 }
 
 function checkBirthday(birthday) {
-    // код для задачи №3 писать здесь
+    let now = Number(new Date());
+    let date = new Date(window.birthday.value);
+    let birthdayUnix = Number(new Date(date))
+    let diff = now - birthdayUnix;
+    let age = diff / 100 / 3600 / 24 / 365;
+    if (age > 18 ) {
+        return true
+    }
+
 }
 
 function initPrintAnimalSound() {
