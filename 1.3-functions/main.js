@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Задача 1
 function getSolutions( a, b, c ) {
     let D = b * b - 4 * a * c;
@@ -84,3 +85,6 @@ console.log(getPersonData({aaa: 0, bbb: 1}))
 console.log(getPersonData({aaa: 1, bbb: 0}))
 console.log(getPersonData({aaa: 1, bbb: 1}))
 */
+=======
+// тут пусто, так как нету UI
+>>>>>>> f15278d45cff2ba3b396d51de6002b0d5545e387

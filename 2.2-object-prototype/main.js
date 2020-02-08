@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function initCheckBirthday() {
     const birthday = document.getElementById('birthday').value;
 
@@ -18,6 +19,8 @@ function checkBirthday(birthday) {
 
 }
 
+=======
+>>>>>>> f15278d45cff2ba3b396d51de6002b0d5545e387
 function initPrintAnimalSound() {
     const animal = {
         sound: 'grrrr',
@@ -28,6 +31,7 @@ function initPrintAnimalSound() {
     document.getElementById('sound').innerHTML = result;   
 }
 
+<<<<<<< HEAD
 function getAnimalSound(animal) {
     if (animal === undefined) {
         return null
@@ -37,6 +41,8 @@ function getAnimalSound(animal) {
     }    
 }
 
+=======
+>>>>>>> f15278d45cff2ba3b396d51de6002b0d5545e387
 function initCalculateStatement() {
     for (let idx = 0; idx < 3; idx++) {
         const marks = document.getElementById('learner-' + idx).value.split(',');
@@ -47,6 +53,7 @@ function initCalculateStatement() {
     }
 }
 
+<<<<<<< HEAD
 function getAverageMark(marks) {
     let sum = 0;
     for (let i = 0; i < marks.length; i++) {
@@ -55,4 +62,12 @@ function getAverageMark(marks) {
     let average = sum / marks.length;
     let roundedAverage = Math.round(average);
     return roundedAverage
+=======
+function initCheckBirthday() {
+    const birthday = document.getElementById('birthday').value;
+
+    const result = checkBirthday(birthday) ? "Да" : "Нет";
+
+    document.getElementById('disclaimer').innerHTML = result;   
+>>>>>>> f15278d45cff2ba3b396d51de6002b0d5545e387
 }
