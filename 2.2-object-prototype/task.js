@@ -22,7 +22,7 @@ function checkBirthday(birthday) {
     let date = new Date(window.birthday.value);
     let birthdayUnix = Number(new Date(date))
     let diff = now - birthdayUnix;
-    let age = diff / 100 / 3600 / 24 / 365;
+    let age = diff / 1000 / 3600 / 24 / 365;
     if (age > 18 ) {
         return true
     }
