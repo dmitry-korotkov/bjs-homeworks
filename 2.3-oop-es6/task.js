@@ -23,7 +23,7 @@ class Weapon {
       return this.attack / 2;
     } else {
       return this.attack;
-    }  
+    }
   }
   
   isBroken() {
@@ -214,4 +214,71 @@ console.log(staffStorm.getDamage());
 console.log(staffStorm.durability); 
 console.log(staffStorm.range);
 console.log(staffStorm.isBroken())
+*/
+
+//Задача 3
+
+class StudentLog {
+  constructor(name) {
+    this.name = name;
+    this.gradesSubject = {};
+  }
+
+  getName() {
+    return this.name
+  }
+
+  addGrade(grade, subject) {
+   if (grade >= 1 && grade <= 5) {
+     if (this.gradesSubject[subject] === undefined) {
+      this.gradesSubject[subject] = [grade];
+     } else {
+       this.gradesSubject[subject].push(grade);
+     }
+     return this.gradesSubject[subject].length
+   } else {
+     return `Вы пытались поставить оценку "${grade}" по предмету "${subject}". Допускаются только числа от 1 до 5.`
+   }
+  }
+
+  getAverageBySubject(subject) {
+    let sumGrade = 0;
+    if (this.gradesSubject[subject] === undefined) {
+      return 0
+    }
+    for (let i = 0; i < this.gradesSubject[subject].length; i++) {
+      sumGrade += this.gradesSubject[subject][i];
+    }
+    return sumGrade / this.gradesSubject[subject].length;
+  }
+
+  getTotalAverage() {
+    let gradeArray = Object.keys(this.gradesSubject)
+    let sum = 0
+    for (let i = 0; i < gradeArray.length; i++) {
+     sum += log.getAverageBySubject(gradeArray[i]);
+    }
+    return sum / gradeArray.length
+  }
+}
+
+
+
+const log = new StudentLog('Олег Никифоров');
+/*
+//Проверка
+console.log(log.getName())
+log.addGrade(2,"math")
+log.addGrade(3,"math")
+log.addGrade(4,"math")
+log.addGrade(4,"geo")
+log.addGrade(7,"math")
+log.addGrade(5,"geo")
+log.addGrade(4,"alg")
+log.addGrade(4,"fr")
+log.addGrade(8,"alg")
+console.log(log.getAverageBySubject("math"))
+console.log(log.getAverageBySubject("fr"))
+console.log(log.getTotalAverage())
+console.log(log)
 */
