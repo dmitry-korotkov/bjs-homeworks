@@ -116,9 +116,68 @@ class LongBow extends Bow {
     this.range = 4;
   }
 }
+
+class Sword extends Weapon {
+  constructor() {
+      super();
+      this.name = "Меч",
+          this.attack = 25,
+          this.durability = 500,
+          this.range = 1,
+          this.initialDurability = this.durability;
+  }
+}
+
+class Knife extends Weapon {
+  constructor() {
+      super();
+      this.name = "Нож",
+          this.attack = 5,
+          this.durability = 300,
+          this.range = 1,
+          this.initialDurability = this.durability;
+  }
+}
+
+class Staff extends Weapon {
+  constructor() {
+      super();
+      this.name = "Посох",
+          this.attack = 8,
+          this.durability = 300,
+          this.range = 2,
+          this.initialDurability = this.durability;
+  }
+}
+
+class Axe extends Sword {
+  constructor() {
+      super();
+      this.name = "Секира",
+          this.attack = 27,
+          this.durability = 800;
+  }
+}
+
+class StaffStorm extends Staff {
+  constructor() {
+      super();
+      this.name = "Посох бури",
+          this.attack = 10,
+          this.range = 3
+  }
+}
+
+
+
 const arm = new Arm();
 const bow = new Bow();
 const longBow = new LongBow();
+const sword = new Sword();
+const knife = new Knife();
+const staff = new Staff();
+const axe = new Axe();
+const thunderStaff = new ThunderStaff();
 //Проверка лука на половину урона
 bow.takeDamage(170);
 console.log(bow.durability);
