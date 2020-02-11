@@ -178,6 +178,7 @@ const knife = new Knife();
 const staff = new Staff();
 const axe = new Axe();
 const thunderStaff = new ThunderStaff();
+
 //Проверка лука на половину урона
 bow.takeDamage(170);
 console.log(bow.durability);
